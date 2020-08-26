@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition />
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnPlayer" Content="Button" HorizontalAlignment="Left" Height="47" Margin="332,108,0,0" VerticalAlignment="Top" Width="132" Click="btnPlayer_Click" Grid.Row="1" Visibility="Visible"/>
+        <TextBlock x:Name="txtPower" HorizontalAlignment="Left" Height="24" Margin="306,33,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Grid.Row="2"/>
+        <TextBlock x:Name="txtExperience" HorizontalAlignment="Left" Height="24" Margin="413,33,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Grid.Row="2"/>
+        <TextBlock x:Name="txtStamina" HorizontalAlignment="Left" Height="24" Margin="502,34,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" Grid.Row="2" TextAlignment="Center" Panel.ZIndex="1"/>
+        <TextBlock x:Name="txtEnemyStamina" HorizontalAlignment="Left" Height="34" Margin="502,51,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Panel.ZIndex="1" TextAlignment="Center"/>
+        <TextBlock x:Name="txtEnemyName" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="102"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="232,53,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="53"/>
+        <ProgressBar x:Name="progressHealth" Height="20" Width="100" Margin="502,34,0,0" Value="50" Maximum="100" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <ProgressBar x:Name="progressHealthEnemy" Height="20" Width="100" Margin="502,50,0,0" Value="50" Maximum="100" HorizontalAlignment="Left" VerticalAlignment="Top" />
 
     </Grid>
 </Window>
