@@ -21,6 +21,7 @@
         <TextBlock HorizontalAlignment="Left" Height="34" Margin="232,53,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="53"/>
         <ProgressBar x:Name="progressHealth" Height="20" Width="100" Margin="502,34,0,0" Value="50" Maximum="100" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" />
         <ProgressBar x:Name="progressHealthEnemy" Height="20" Width="100" Margin="502,50,0,0" Value="50" Maximum="100" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Label Content="Label" HorizontalAlignment="Left" Margin="604,146,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

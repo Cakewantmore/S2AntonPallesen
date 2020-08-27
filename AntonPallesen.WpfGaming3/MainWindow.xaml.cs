@@ -23,8 +23,10 @@ namespace AntonPallesen.WpfGaming3
     {
         string path = @"C:\StreamReader\Enemies.txt";
         CharacterClass bob = new CharacterClass("");//, 0,0);
-       // EnemyClass box = new EnemyClass("Box", 10000, 10000, 0);
+       
         List<EnemyClass> enemyList = new List<EnemyClass>();
+        
+        
         Random rnd = new Random();
         Battle battle = new Battle();
         EnemyClass currentEnemy;
@@ -37,7 +39,10 @@ namespace AntonPallesen.WpfGaming3
             txtStamina.Text = bob.CurrentHealth.ToString() + " / " + bob.Stamina.ToString();
             progressHealth.Maximum = bob.Stamina;
             progressHealth.Value = bob.CurrentHealth;
-            enemyList.Add(new EnemyClass("Box", 10000, 10000, 0));
+            enemyList = LogicClass.GetEnemyList();
+
+            
+            
             randomEnemy();
             updateEnemyStats();
             updatePlayerStats();
@@ -50,6 +55,7 @@ namespace AntonPallesen.WpfGaming3
             battle.testingBattle(bob, currentEnemy);
             updateEnemyStats();
             updatePlayerStats();
+            
             //progressHealth.Value = bob.CurrentHealth;
             //progressHealthEnemy.Value = currentEnemy.CurrentHealth;
             //btnPlayer.Visibility = Visibility.Hidden;
@@ -74,7 +80,7 @@ namespace AntonPallesen.WpfGaming3
             txtEnemyStamina.Text = currentEnemy.CurrentHealth.ToString() + " / " + currentEnemy.Stamina.ToString();
             progressHealthEnemy.Maximum = currentEnemy.Stamina;
         }
-        private static
+        
 
     }
 }

@@ -9,10 +9,11 @@ namespace AntonPallesen.WpfGaming3
     {
         //Fields
         
-        string path = @"C:\StreamReader\Enemies.txt";
-        private static List<string> logicEnemyList(string path)
+        static string path = @"C:\StreamReader\Enemies.txt";
+        public static List<string> logicEnemyList(string path)
         {
             List<string> testEnemy = new List<string>();
+            
             using (StreamReader reader = new StreamReader(path, Encoding.Default))
             {
                 string input = "";
@@ -21,38 +22,41 @@ namespace AntonPallesen.WpfGaming3
                     testEnemy.Add(input);
                 }
             }
-            int lineNumber = 1;
-            List<EnemyClass> newEnemy = EnemyArray(testEnemy);
-            foreach ( var item in testEnemy)
-            {
-                lineNumber++;
-                
-            }
+            
+            
+            
             return testEnemy;
         }
-        private static List<EnemyClass> EnemyArray(List<string> numbers)
+
+        public static List<EnemyClass> EnemyArray(List<string> numbers)
         {
-            List<EnemyClass> newEnemy= new List<EnemyClass>();
+            List<EnemyClass> newEnemy = new List<EnemyClass>();
             string[] input;
             foreach (var item in numbers)
             {
                 input = SplitThings(item);
                 //Convert strings to int
-                string name = input[0];
-                string comment = input[1];
-                string howFar = input[2];
+                string enemyName = input[0];
+                int.TryParse(input[1], out int enemyPower);
+                int.TryParse(input[2], out int enemyStamina);
+                int.TryParse(input[3], out int enemyExperience);
 
                 //Create box object
-                EnemyClass calculatedTest = new EnemyClass(name, comment, howFar);
+                EnemyClass calculatedTest = new EnemyClass(enemyName, enemyPower, enemyStamina, enemyExperience);
                 //Add box object to list
-                fullGame.Add(calculatedTest);
+                newEnemy.Add(calculatedTest);
             }
-            return fullGame;
+            return newEnemy;
         }
         private static string[] SplitThings(string d)
         {
             string[] split = d.Split(',');
             return split;
         }
+        public static List<EnemyClass> GetEnemyList()
+        {
+            List<EnemyClass> newEnemy = new List<EnemyClass>();
+            newEnemy = EnemyArray(logicEnemyList(path));
+            return newEnemy;       }
     }
 }
