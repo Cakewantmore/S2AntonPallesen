@@ -21,11 +21,11 @@ namespace AntonPallesen.WpfGaming3
     /// </summary>
     public partial class MainWindow : Window
     {
-        string path = @"C:\StreamReader\Enemies.txt";
+        //string path = @"C:\StreamReader\Enemies.txt";
         CharacterClass bob = new CharacterClass("");//, 0,0);
        
         List<EnemyClass> enemyList = new List<EnemyClass>();
-        
+        Database database = new Database();
         
         Random rnd = new Random();
         Battle battle = new Battle();
@@ -39,8 +39,8 @@ namespace AntonPallesen.WpfGaming3
             txtStamina.Text = bob.CurrentHealth.ToString() + " / " + bob.Stamina.ToString();
             progressHealth.Maximum = bob.Stamina;
             progressHealth.Value = bob.CurrentHealth;
-            enemyList = LogicClass.GetEnemyList();
-
+            //enemyList = LogicClass.GetEnemyList();
+            enemyList = database.GetEnemies();
             
             
             randomEnemy();
@@ -80,7 +80,47 @@ namespace AntonPallesen.WpfGaming3
             txtEnemyStamina.Text = currentEnemy.CurrentHealth.ToString() + " / " + currentEnemy.Stamina.ToString();
             progressHealthEnemy.Maximum = currentEnemy.Stamina;
         }
-        
 
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if (combatCanvas.Visibility == Visibility.Hidden)
+            {
+                combatCanvas.Visibility = Visibility.Visible;
+                createEnemyCanvas.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                combatCanvas.Visibility = Visibility.Hidden;
+                createEnemyCanvas.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void makeEnemyConfirmBtn_Click(object sender, RoutedEventArgs e)
+        {
+            EnemyClass newEnemy = new EnemyClass();
+            newEnemy.Name = makeEnemyName.Text;
+            try
+            {
+                newEnemy.Power = int.Parse(makeEnemyPower.Text);
+                newEnemy.Stamina = int.Parse(makeEnemyStamina.Text);
+                newEnemy.Experience = int.Parse(makeEnemyExperience.Text);
+                database.addNew(newEnemy);
+            }
+            catch(Exception EX)
+            {
+                MessageBox.Show("Du har lavet en fejl" + EX.Message);
+            }
+            
+        }
+
+        private void makeEnemyName_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (makeEnemyName.Text == "Name")
+            {
+
+                makeEnemyName.Text = String.Empty;
+            }
+            
+        }
     }
 }

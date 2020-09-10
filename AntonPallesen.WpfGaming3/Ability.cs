@@ -7,24 +7,21 @@ namespace AntonPallesen.WpfGaming3
 {
     public class Ability
     {
+        Random rnd = new Random();
         private string name;
-        private AbilityType type;
+        
         private string desc;
 
-        public Ability(string name, AbilityType type)
+        public Ability(string name, string desc)
         {
             Name = name;
-            Type = type;
+            Desc = desc;
         }
-        public Ability(int Ability1)
+        public virtual int useAbility(int Power, EnemyClass target)
         {
-            if(Ability1 == 0)
-            {
-                this.Name = "Fire";
-
-            }
+            return Power + rnd.Next(0, 2000);
         }
         public string Name { get => name; set => name = value; }
-        public AbilityType Type { get => type; set => type = value; }
+        public string Desc { get => desc; set => desc = value; }
     }
 }

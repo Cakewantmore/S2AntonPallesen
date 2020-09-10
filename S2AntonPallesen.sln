@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonPallesen.WpfGaming3", "AntonPallesen.WpfGaming3\AntonPallesen.WpfGaming3.csproj", "{6EA73E22-BC6D-4B57-9824-02B3345EC5E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonPallesen.WpfGaming3", "AntonPallesen.WpfGaming3\AntonPallesen.WpfGaming3.csproj", "{6EA73E22-BC6D-4B57-9824-02B3345EC5E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonPallesen.WpfGaming2", "AntonPallesen.WpfGaming2\AntonPallesen.WpfGaming2.csproj", "{211E6EE5-469D-43D8-A196-43B486FD5A63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntonPallesen.WpfGaming2", "AntonPallesen.WpfGaming2\AntonPallesen.WpfGaming2.csproj", "{211E6EE5-469D-43D8-A196-43B486FD5A63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CourtBooking.Service", "CourtBooking.Service\CourtBooking.Service.csproj", "{316E211C-C281-4558-93D5-661D1506EE63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{AE6B3A2A-DBFB-4F9A-9096-9A941CBA373A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{211E6EE5-469D-43D8-A196-43B486FD5A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{211E6EE5-469D-43D8-A196-43B486FD5A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{211E6EE5-469D-43D8-A196-43B486FD5A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316E211C-C281-4558-93D5-661D1506EE63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316E211C-C281-4558-93D5-661D1506EE63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316E211C-C281-4558-93D5-661D1506EE63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316E211C-C281-4558-93D5-661D1506EE63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6B3A2A-DBFB-4F9A-9096-9A941CBA373A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6B3A2A-DBFB-4F9A-9096-9A941CBA373A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6B3A2A-DBFB-4F9A-9096-9A941CBA373A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6B3A2A-DBFB-4F9A-9096-9A941CBA373A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

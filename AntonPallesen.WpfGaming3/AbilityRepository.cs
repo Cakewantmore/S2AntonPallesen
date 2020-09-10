@@ -10,7 +10,7 @@ namespace AntonPallesen.WpfGaming3
         private List<Ability> abilities = new List<Ability>();
         public AbilityRepository()
         {
-            abilities.Add(new Ability("GoodAbilty", AbilityType.Debuff)) ;
+            
         }
     }
 }

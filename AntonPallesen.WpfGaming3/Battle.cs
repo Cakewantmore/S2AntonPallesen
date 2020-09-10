@@ -17,32 +17,35 @@ namespace AntonPallesen.WpfGaming3
             if (turnOrder == 0)
             {
                 a.CurrentHealth -= enemyDamage;
+                b.CurrentHealth -= playerDamage;
+
                 //???
-                if( a.CurrentHealth <= 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    
-                    b.CurrentHealth -= playerDamage;
-                    
-                }
+                //if ( a.CurrentHealth <= 0)
+                //{
+                //    return 0;
+                //}
+                //else
+                //{
+                //    
+                //    b.CurrentHealth -= playerDamage;
+                //    
+                //}
             }
 
             else{
 
                 b.CurrentHealth -= playerDamage;
+                a.CurrentHealth -= enemyDamage;
                 //???
-                if (b.CurrentHealth <= 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    a.CurrentHealth -= enemyDamage;
-                    
-                }
+                //if (b.CurrentHealth <= 0)
+                //{
+                //    return 0;
+                //}
+                //else
+                //{
+                //    a.CurrentHealth -= enemyDamage;
+                //    
+                //}
             }
             return 0;
         }
