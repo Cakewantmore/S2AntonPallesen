@@ -72,6 +72,7 @@ namespace AntonPallesen.WpfGaming3
         {
             int oiedns = rnd.Next(0, enemyList.Count);
             currentEnemy = enemyList[oiedns];
+            
         }
 
         private void updateEnemyStats()

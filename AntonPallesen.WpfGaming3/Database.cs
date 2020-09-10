@@ -59,5 +59,9 @@ namespace AntonPallesen.WpfGaming3
                 MessageBox.Show("Du har lavet en fejl" + EX.Message);
             }
         }
+        //public void deleteEnemy(EnemyClass enemy)
+        //{
+        //    string deleteNewEnemyQuery = $"DELETE"
+        //}
     }
 }
