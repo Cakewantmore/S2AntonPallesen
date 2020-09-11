@@ -14,7 +14,10 @@ namespace CourtBooking.Service
             {
                 Console.WriteLine(kage);
             }
-            Console.WriteLine(bookings[1]);
+
+            Entities oneBooking = bookingService.GetOneBooking(1);
+            
+            Console.WriteLine(oneBooking);
         }
     }
 }

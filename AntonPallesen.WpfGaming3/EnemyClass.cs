@@ -14,6 +14,7 @@ namespace AntonPallesen.WpfGaming3
         private int experience;
         private int currentHealth;
         private List<Ability> abilities;
+        private int id;
 
         public string Name { get => name; set => name = value; }
         public int Power { get => power; set => power = value; }
@@ -21,9 +22,12 @@ namespace AntonPallesen.WpfGaming3
         public int Experience { get => experience; set => experience = value; }
         public int CurrentHealth { get => currentHealth; set => currentHealth = value; }
         public List<Ability> Abilities { get => abilities; set => abilities = value; }
+        public int Id { get => id; set => id = value; }
 
         public EnemyClass(string name, int power, int stamina, int experience)
         {
+
+            Id = id;
             Name = name;
             Power = power;
             Stamina = stamina;
